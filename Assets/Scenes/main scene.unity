@@ -448,6 +448,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementPrefab: {fileID: 2170788611206573254, guid: f469b7d1eb3b6438b87a601e89f6153f, type: 3}
+  moveInterval: 0.2
+  mapSize: {x: 100, y: 100}
+  perlinNoiseRatio: 0.06
+  rockThreshold: 0.4
+  enemies: []
+  enemyTimers: []
+  enemyMoveInterval: 0.3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

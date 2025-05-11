@@ -13,6 +13,8 @@ public class GridElement : MonoBehaviour
     public Vector2Int mapIdx;
 
     public bool isMine;
+
+    public string mineType;
     
     public void UpdateDisplay()
     {
@@ -34,6 +36,18 @@ public class GridElement : MonoBehaviour
                                   && mapAffiliated[mapIdx + Vector2Int.left].isMine;
         
             frameSpr.sprite = DataMgr.Instance.GetFrameSprite(isTopAdjacent, isRightAdjacent, isDownAdjacent, isLeftAdjacent);
+
+            if (isMine)
+            {
+                if (isTopAdjacent && isRightAdjacent && isDownAdjacent && isLeftAdjacent)
+                {
+                    text.text = "?";
+                }
+                else
+                {
+                    text.text = mineType;
+                }   
+            }
         }
         else
         {
